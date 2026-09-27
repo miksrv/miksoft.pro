@@ -1,0 +1,76 @@
+// Hidden on screen, becomes the whole document in print
+.printResume
+    display: none
+
+@media print
+    .printResume
+        display: block
+        color: #000
+        background: #fff
+        font-size: 11pt
+        line-height: 1.45
+
+        h1
+            margin: 0
+            font-size: 20pt
+
+        h2
+            margin: 14pt 0 6pt
+            font-size: 13pt
+            border-bottom: 1pt solid #999
+            padding-bottom: 2pt
+
+        h3
+            margin: 0
+            font-size: 11pt
+
+        ul
+            margin: 4pt 0 0
+            padding-left: 16pt
+            list-style: disc
+
+    .header
+        margin-bottom: 8pt
+
+    .title
+        margin: 2pt 0
+        font-size: 12pt
+
+    .contacts
+        margin: 1pt 0
+        font-size: 9pt
+        color: #333
+
+    .summary
+        margin: 0 0 6pt
+
+    .role
+        margin-bottom: 10pt
+        break-inside: avoid
+
+    .roleHeader
+        display: flex
+        justify-content: space-between
+        align-items: baseline
+        gap: 12pt
+
+        span
+            font-size: 9pt
+            color: #333
+            white-space: nowrap
+
+    .stack
+        margin: 3pt 0 0
+        font-size: 9pt
+        color: #333
+
+    .project
+        margin-bottom: 6pt
+        break-inside: avoid
+
+        p
+            margin: 1pt 0 0
+            font-size: 10pt
+
+    .stackRow
+        margin: 0 0 3pt
