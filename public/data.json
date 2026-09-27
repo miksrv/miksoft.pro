@@ -1,0 +1,202 @@
+{
+    "biography": {
+        "name": "Misha Topchilo",
+        "title": "Engineering Lead",
+        "location": "California, USA",
+        "timezone": "Pacific Time",
+        "availableForWork": false,
+        "lead": "I lead engineering teams and own the architecture of what they build: from the first design decision, through delivery, to the system running in production.",
+        "now": [
+            "I've spent **15+ years** building production software. Today I lead engineering on a large React and TypeScript platform at a **US enterprise software company**: I set the architecture and engineering standards for a distributed team, and built the testing and delivery pipeline that took automated test coverage from near zero to 85%+.",
+            "Before that, I spent five years as an **engineering team lead for a government IT contractor**, shipping federal and regional systems used by millions of citizens. Earlier, I worked as a full-stack engineer in media, telecom, and GIS."
+        ]
+    },
+    "emailParts": ["mt.tfoskim", "moc.liamg"],
+    "contactLinks": [
+        {
+            "icon": "github",
+            "label": "GitHub",
+            "link": "https://github.com/miksrv"
+        },
+        {
+            "icon": "linkedin",
+            "label": "LinkedIn",
+            "link": "https://www.linkedin.com/in/mikcatsvill/"
+        },
+        {
+            "icon": "telegram",
+            "label": "Telegram",
+            "link": "https://t.me/miksoft"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Lead Software Engineer",
+            "org": "US enterprise software company",
+            "period": ["09/01/2021"],
+            "bullets": [
+                "Technical lead for a large React/TypeScript application; designed the component architecture now used across the organization.",
+                "Raised automated test coverage from near zero to 85%+ across unit, integration, and visual regression tests.",
+                "Built the CI/CD pipeline with SonarQube quality gates, replacing manual regression testing."
+            ],
+            "stack": ["TypeScript", "React", "Redux", "Go", "PostgreSQL", "Playwright", "Jenkins"]
+        },
+        {
+            "role": "Senior Frontend Developer",
+            "org": "Enterprise engineering",
+            "badge": "Contract",
+            "period": ["07/01/2021", "11/01/2022"],
+            "bullets": [
+                "Built a QA portal that gave engineering leadership visibility across 36 microservices for the first time.",
+                "Wrote UI test suites for 36+ services from scratch and consolidated quality metrics into one dashboard."
+            ],
+            "stack": ["TypeScript", "React", "Jest", "Playwright", "Jenkins"]
+        },
+        {
+            "role": "Lead Software Engineer",
+            "org": "Media group",
+            "badge": "Part-time",
+            "period": ["03/01/2018", "09/01/2024"],
+            "bullets": [
+                "Owned the technical lifecycle of a portfolio of high-traffic news sites under strict performance SLAs.",
+                "Ran the server infrastructure: provisioning, security hardening, patching, and disaster recovery."
+            ],
+            "stack": ["PHP", "MySQL", "WordPress", "Linux"]
+        },
+        {
+            "role": "Engineering Team Lead",
+            "org": "Government IT contractor",
+            "period": ["08/01/2016", "07/01/2021"],
+            "bullets": [
+                "Led a cross-functional team delivering systems for federal and regional government under strict compliance requirements.",
+                "Built the payment integration with state banking infrastructure for a federal cashback program used by millions of citizens at launch.",
+                "Took a citizen issue-reporting portal from zero to the region's primary municipal reporting channel."
+            ],
+            "stack": ["TypeScript", "React", "PHP", "Python", "PostgreSQL", "Docker"]
+        },
+        {
+            "role": "Full-Stack Developer",
+            "org": "Media and telecom software",
+            "period": ["04/01/2015", "08/01/2016"],
+            "bullets": [
+                "Built a high-load news aggregation platform and a telecom billing system with subscriber management."
+            ],
+            "stack": ["PHP", "MySQL", "JavaScript", "Linux"]
+        },
+        {
+            "role": "Full-Stack Developer",
+            "org": "GIS software company",
+            "period": ["10/01/2013", "04/01/2015"],
+            "bullets": [
+                "Designed the PostgreSQL spatial database and led the migration from a monolith to microservices."
+            ],
+            "stack": ["PHP", "Yii", "PostgreSQL", "JavaScript"]
+        }
+    ],
+    "earlierRoles": {
+        "label": "Earlier roles in web development and systems engineering",
+        "period": ["06/01/2005", "10/01/2013"]
+    },
+    "projects": {
+        "featured": [
+            {
+                "title": "CubeSat platform",
+                "icon": "/images/icons/cubesat.png",
+                "link": "https://cubesat.miksoft.pro/",
+                "wide": true,
+                "description": "Flight software for a physical CubeSat and its cloud ground station: five Python subsystem services on an MQTT bus, telemetry over HTTP and LoRa.",
+                "stack": "Python, MQTT, Raspberry Pi, PHP, React, three.js",
+                "parts": [
+                    {
+                        "label": "Flight software",
+                        "link": "https://github.com/miksrv/cubesat-sim"
+                    },
+                    {
+                        "label": "Ground station",
+                        "link": "https://github.com/miksrv/cubesat-groundstation"
+                    }
+                ]
+            },
+            {
+                "title": "Automated observatory",
+                "icon": "/images/icons/observatory.png",
+                "link": "https://astro.miksoft.pro/",
+                "wide": true,
+                "description": "Remote telescope control and image capture on Raspberry Pi, Arduino, and Python.",
+                "stack": "Python, Arduino, Raspberry Pi, REST API",
+                "parts": [
+                    {
+                        "label": "Source",
+                        "link": "https://github.com/miksrv/astronomy-portal"
+                    }
+                ]
+            },
+            {
+                "title": "Geometki",
+                "icon": "/images/icons/geometki.png",
+                "link": "https://geometki.com/",
+                "description": "Geo-discovery platform with interactive maps and user content.",
+                "stack": "Next.js, PHP, MySQL"
+            },
+            {
+                "title": "IoT Weather Station",
+                "icon": "/images/icons/meteo.png",
+                "link": "https://meteo.miksoft.pro/",
+                "description": "Arduino firmware, a REST API, and a live dashboard; the observatory's safety gate.",
+                "stack": "Arduino, C++, REST API, React"
+            }
+        ],
+        "more": [
+            {
+                "title": "TARS",
+                "link": "https://github.com/miksrv/telegram-ai-bot",
+                "description": "Telegram AI bot, the front end for the CubeSat project"
+            },
+            {
+                "title": "Starmap service",
+                "link": "https://github.com/miksrv/starmap-service",
+                "description": "On-demand night-sky chart renderer over MQTT"
+            },
+            {
+                "title": "Simple React UI Kit",
+                "icon": "/images/icons/uikit.svg",
+                "link": "https://miksrv.github.io/simple-react-ui-kit/",
+                "description": "Typed React component library on npm, with Storybook docs"
+            },
+            {
+                "title": "Asteroid tracker",
+                "icon": "/images/icons/asteroid.png",
+                "link": "https://asteroid.miksoft.pro/",
+                "description": "Near-Earth approaches from NASA NeoWS data"
+            },
+            {
+                "title": "Look at Stars",
+                "icon": "telegram",
+                "link": "https://t.me/look_at_stars",
+                "description": "Astronomy channel on Telegram"
+            }
+        ]
+    },
+    "stack": [
+        {
+            "group": "Leadership",
+            "items": "Team leadership, hiring, mentoring, architecture reviews, engineering standards"
+        },
+        {
+            "group": "Engineering",
+            "items": "TypeScript, React, Next.js, Redux, Node.js, Go, PHP, Python, PostgreSQL, MySQL"
+        },
+        {
+            "group": "Platform",
+            "items": "Docker, CI/CD, Jenkins, GitHub Actions, SonarQube, Playwright, Linux"
+        },
+        {
+            "group": "AI",
+            "items": "LLM integration (OpenAI, Groq), AI-assisted engineering, prompt design, workflow automation"
+        }
+    ],
+    "seo": {
+        "title": "Misha Topchilo — Engineering Lead",
+        "description": "Engineering Lead with 15+ years building production software across government, media, and enterprise SaaS. I lead teams, design architecture, and ship systems end to end."
+    }
+}
