@@ -62,8 +62,26 @@
                 border-radius: 12px
 
 .arrow
+    display: flex
+    flex: none
     color: var(--text-color-faint)
-    font-size: 13px
+    transition: color 0.15s
+
+.card:hover .arrow,
+.list a:hover .arrow
+    color: var(--text-color-muted)
+
+// Thin stroked arrow; the extra class beats `.cardHead svg` (fill/size/radius)
+.cardHead .extIcon,
+.extIcon
+    width: 14px
+    height: 14px
+    border-radius: 0
+    fill: none
+    stroke: currentColor
+    stroke-width: 1.5
+    stroke-linecap: round
+    stroke-linejoin: round
 
 .meta
     margin-top: 4px
@@ -94,8 +112,14 @@
         border-color: var(--highlight-color)
         color: var(--highlight-color)
 
-    span
+    .extIcon
+        width: 12px
+        height: 12px
         color: var(--text-color-faint)
+        transition: color 0.15s
+
+    &:hover .extIcon
+        color: var(--highlight-color)
 
 .list
     margin: 16px 0 0

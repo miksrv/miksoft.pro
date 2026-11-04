@@ -45,7 +45,7 @@ No animation library: the redesign removed framer-motion deliberately.
 
 **Resume**: "Resume (PDF)" triggers `window.print()`; `PrintResume` is the hidden print-only layout (`@media print` shows it, hides `main`/`footer`/theme toggle).
 
-**Theming**: `ThemeProvider` (`utils/ThemeProvider.tsx`) manages a dark/light toggle, persisted via `data-theme` attribute on `<html>` and `localStorage`; an inline script in `_document.tsx` stamps `data-theme` before hydration (no flash). Both palettes are CSS custom properties in `/styles/theme.css` (`:root` = dark defaults, `[data-theme='light']` = overrides). Container width: `640px`.
+**Theming**: `ThemeProvider` (`utils/ThemeProvider.tsx`) manages a dark/light toggle, persisted via `data-theme` attribute on `<html>` and `localStorage`; an inline script in `_document.tsx` stamps `data-theme` before hydration (no flash). Both palettes are CSS custom properties in `/styles/theme.css` (`:root` = dark defaults, `[data-theme='light']` = overrides). Container width: `720px`.
 
 **SEO / sharing**: `_document.tsx` embeds JSON-LD `Person` (name, title, links, `knowsAbout` from stack). `pages/index.tsx` sets OpenGraph with `/public/og-image.png` (1200×630: photo + name + title) — regenerate it if the name/title/photo changes.
 

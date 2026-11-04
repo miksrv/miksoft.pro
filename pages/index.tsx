@@ -13,9 +13,17 @@ const MainPage: React.FC = () => {
             <NextSeo
                 title={data?.seo?.title}
                 description={data?.seo?.description}
+                canonical={'https://miksoft.pro/'}
                 openGraph={{
+                    type: 'profile',
+                    url: 'https://miksoft.pro/',
+                    profile: {
+                        firstName: data?.biography?.name?.split(' ')[0],
+                        lastName: data?.biography?.name?.split(' ').slice(1).join(' ')
+                    },
                     images: [
                         {
+                            alt: data?.seo?.title,
                             height: 630,
                             url: 'https://miksoft.pro/og-image.png',
                             width: 1200
@@ -24,6 +32,7 @@ const MainPage: React.FC = () => {
                     locale: 'en-US',
                     siteName: 'miksoft.pro'
                 }}
+                twitter={{ cardType: 'summary_large_image' }}
             />
 
             <Hero />

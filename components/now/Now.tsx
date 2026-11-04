@@ -48,7 +48,7 @@ export const Now: React.FC = () => {
 
     return (
         <section aria-label={'About'}>
-            <p className={'sectionLabel'}>{'Now'}</p>
+            <h2 className={'sectionLabel'}>{'Now'}</h2>
 
             <div className={styles.prose}>
                 {data?.biography?.now?.map((paragraph) => (

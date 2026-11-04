@@ -13,7 +13,8 @@ const jsonLd = {
         '@type': 'PostalAddress',
         addressLocality: data.biography.location
     },
-    knowsAbout: data.stack.map((row) => row.items).join(', '),
+    description: data.seo.description,
+    knowsAbout: data.stack.flatMap((row) => row.items.split(', ')),
     sameAs: data.contactLinks.map((l) => l.link)
 }
 
