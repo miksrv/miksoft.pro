@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 
 import { StarField } from '@/components'
-import astronaut from '@/public/astronaut.png'
+import astronaut from '@/public/astronaut.webp'
 
 type NotFoundProps = object
 

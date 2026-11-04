@@ -9,7 +9,7 @@ export const Stack: React.FC = () => {
 
     return (
         <section aria-label={'Stack'}>
-            <p className={'sectionLabel'}>{'Stack'}</p>
+            <h2 className={'sectionLabel'}>{'Stack'}</h2>
             <dl className={styles.stack}>
                 {data?.stack?.map((row) => (
                     <React.Fragment key={row.group}>

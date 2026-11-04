@@ -25,6 +25,16 @@ const ProjectIcon: React.FC<{ icon?: string; size: number }> = ({ icon, size }) 
     return <Icon name={icon === 'telegram' ? 'telegram' : 'github'} />
 }
 
+const ExternalArrow: React.FC = () => (
+    <svg
+        className={styles.extIcon}
+        viewBox={'0 0 16 16'}
+        aria-hidden={'true'}
+    >
+        <path d={'M5.5 4.5h6v6M11.5 4.5l-7 7'} />
+    </svg>
+)
+
 export const Projects: React.FC = () => {
     const data = useSiteData()
     const projects = data?.projects
@@ -33,7 +43,7 @@ export const Projects: React.FC = () => {
 
     return (
         <section aria-label={'Projects'}>
-            <p className={'sectionLabel'}>{'Projects'}</p>
+            <h2 className={'sectionLabel'}>{'Projects'}</h2>
 
             <div className={styles.grid}>
                 {projects?.featured?.map((project) => (
@@ -55,11 +65,8 @@ export const Projects: React.FC = () => {
                                     {project.title}
                                 </Link>
                             </h3>
-                            <span
-                                className={styles.arrow}
-                                aria-hidden={'true'}
-                            >
-                                {'↗'}
+                            <span className={styles.arrow}>
+                                <ExternalArrow />
                             </span>
                         </div>
                         <p>{project.description}</p>
@@ -74,7 +81,7 @@ export const Projects: React.FC = () => {
                                         target={'_blank'}
                                         rel={'noopener noreferrer'}
                                     >
-                                        {part.label} <span>{'↗'}</span>
+                                        {part.label} <ExternalArrow />
                                     </Link>
                                 ))}
                             </div>
@@ -99,11 +106,8 @@ export const Projects: React.FC = () => {
                             </span>
                             <span className={styles.name}>{project.title}</span>
                             <span className={styles.desc}>{project.description}</span>
-                            <span
-                                className={styles.arrow}
-                                aria-hidden={'true'}
-                            >
-                                {'↗'}
+                            <span className={styles.arrow}>
+                                <ExternalArrow />
                             </span>
                         </Link>
                     </li>

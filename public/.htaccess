@@ -1,15 +1,35 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
+# Apache config for the static export (copied to /out by `next build`).
+# Every block is wrapped in <IfModule>, so a missing module never breaks the site.
 
-  # If there is a .html file with that name, give it to me
-  RewriteCond %{REQUEST_FILENAME}.html -f
-  RewriteRule ^(.*)$ $1.html [L]
+# Custom 404 page (the starfield one from pages/404.tsx)
+ErrorDocument 404 /404.html
 
-  # If file or directory not found - 404
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ - [R=404,L]
+# ── Caching ──────────────────────────────────────────────
+<IfModule mod_headers.c>
+    # HTML and data: always revalidate, so a deploy is visible immediately
+    <FilesMatch "\.(html|json|xml|txt|webmanifest)$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+
+    # Images, icons, fonts in /public: a month
+    <FilesMatch "\.(png|jpe?g|webp|svg|ico|woff2?)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+
+    # Next.js build assets have content hashes in their names: cache forever
+    <If "%{REQUEST_URI} =~ m#^/_next/static/#">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </If>
 </IfModule>
 
-# Set up a custom 404 page
-ErrorDocument 404 /404.html
+# ── Compression ──────────────────────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/xml application/manifest+json image/svg+xml
+</IfModule>
+
+# ── MIME types ───────────────────────────────────────────
+<IfModule mod_mime.c>
+    AddType application/manifest+json .webmanifest
+    AddType image/webp .webp
+    AddType text/vcard .vcf
+</IfModule>

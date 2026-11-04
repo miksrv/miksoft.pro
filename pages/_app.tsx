@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { AppProps, NextWebVitalsMetric } from 'next/app'
+import { AppProps } from 'next/app'
 import { Hanken_Grotesk } from 'next/font/google'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -31,20 +31,23 @@ const App = ({ Component, pageProps }: AppProps) => {
                 />
                 <meta
                     name={'viewport'}
-                    content={'width=device-width, initial-scale=1, shrink-to-fit=no'}
+                    content={'width=device-width, initial-scale=1'}
                 />
                 <meta
                     name={'apple-mobile-web-app-status-bar-style'}
                     content={'black-translucent'}
                 />
                 <meta
+                    key={'theme-color-dark'}
                     name={'theme-color'}
                     content={'#141311'}
                     media={'(prefers-color-scheme: dark)'}
                 />
                 <meta
+                    key={'theme-color-light'}
                     name={'theme-color'}
-                    content={'#141311'}
+                    content={'#f8f8f6'}
+                    media={'(prefers-color-scheme: light)'}
                 />
                 <link
                     rel={'apple-touch-icon'}
@@ -134,13 +137,6 @@ const App = ({ Component, pageProps }: AppProps) => {
             )}
         </>
     )
-}
-
-export function reportWebVitals(metric: NextWebVitalsMetric) {
-    if (process.env.NODE_ENV === 'production') {
-        // eslint-disable-next-line no-console
-        console.log(metric)
-    }
 }
 
 export default App

@@ -52,7 +52,7 @@ export const Experience: React.FC = () => {
 
     return (
         <section aria-label={'Experience'}>
-            <p className={'sectionLabel'}>{'Experience'}</p>
+            <h2 className={'sectionLabel'}>{'Experience'}</h2>
 
             <ul className={styles.rows}>
                 {data?.experience?.map((item, index) => (
