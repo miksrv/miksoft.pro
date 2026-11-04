@@ -7,7 +7,7 @@
         "availableForWork": false,
         "lead": "I lead engineering teams and own the architecture of what they build: from the first design decision, through delivery, to the system running in production.",
         "now": [
-            "I've spent **15+ years** building production software. Today I lead engineering on a large React and TypeScript platform at a **US enterprise software company**: I set the architecture and engineering standards for a distributed team, and built the testing and delivery pipeline that took automated test coverage from near zero to 85%+.",
+            "I've spent **20+ years** building production software. Today I lead engineering on a large React and TypeScript platform at a **US enterprise software company**: I set the architecture and engineering standards for a distributed team, and built the testing and delivery pipeline that replaced manual regression testing with automated quality gates.",
             "Before that, I spent five years as an **engineering team lead for a government IT contractor**, shipping federal and regional systems used by millions of citizens. Earlier, I worked as a full-stack engineer in media, telecom, and GIS."
         ]
     },
@@ -36,19 +36,23 @@
             "period": ["09/01/2021"],
             "bullets": [
                 "Technical lead for a large React/TypeScript application; designed the component architecture now used across the organization.",
+                "Lead a distributed engineering team through hiring, onboarding, mentoring, and architecture and code reviews.",
+                "Work across the stack: Go services and the PostgreSQL data model behind the platform's APIs, keeping API contracts and the UI in sync.",
                 "Raised automated test coverage from near zero to 85%+ across unit, integration, and visual regression tests.",
-                "Built the CI/CD pipeline with SonarQube quality gates, replacing manual regression testing."
+                "Built the CI/CD pipeline with SonarQube quality gates, replacing manual regression testing.",
+                "Introduced AI-assisted engineering: built MCP servers that connect coding agents to the team's internal engineering tools."
             ],
             "stack": ["TypeScript", "React", "Redux", "Go", "PostgreSQL", "Playwright", "Jenkins"]
         },
         {
             "role": "Senior Frontend Developer",
             "org": "Enterprise engineering",
-            "badge": "Contract",
+            "badge": "Transition contract",
             "period": ["07/01/2021", "11/01/2022"],
             "bullets": [
+                "Short engagement that overlapped my move into the current lead role and wound down once that role was fully staffed.",
                 "Built a QA portal that gave engineering leadership visibility across 36 microservices for the first time.",
-                "Wrote UI test suites for 36+ services from scratch and consolidated quality metrics into one dashboard."
+                "Wrote UI test suites for each service from scratch and consolidated their quality metrics into a single dashboard."
             ],
             "stack": ["TypeScript", "React", "Jest", "Playwright", "Jenkins"]
         },
@@ -122,12 +126,24 @@
                 "icon": "/images/icons/observatory.png",
                 "link": "https://astro.miksoft.pro/",
                 "wide": true,
-                "description": "Remote telescope control and image capture on Raspberry Pi, Arduino, and Python.",
-                "stack": "Python, Arduino, Raspberry Pi, REST API",
+                "description": "Remote-controlled home observatory: Arduino and Raspberry Pi hardware, an INDI driver for the roll-off roof with a software and hardware interlock, and a Python pipeline that plate-solves every frame, extracts sources, and cross-matches them against star catalogs.",
+                "stack": "Python, C++, Arduino, INDI, PHP, MariaDB, React",
                 "parts": [
                     {
-                        "label": "Source",
+                        "label": "Web portal",
                         "link": "https://github.com/miksrv/astronomy-portal"
+                    },
+                    {
+                        "label": "FITS pipeline",
+                        "link": "https://github.com/miksrv/observatory-pipeline"
+                    },
+                    {
+                        "label": "Pipeline API",
+                        "link": "https://github.com/miksrv/observatory-api"
+                    },
+                    {
+                        "label": "Roof driver",
+                        "link": "https://github.com/miksrv/indi-rollroof-controller"
                     }
                 ]
             },
@@ -135,8 +151,8 @@
                 "title": "Geometki",
                 "icon": "/images/icons/geometki.png",
                 "link": "https://geometki.com/",
-                "description": "Geo-discovery platform with interactive maps and user content.",
-                "stack": "Next.js, PHP, MySQL"
+                "description": "Crowdsourced geo-discovery platform: 1,100+ documented places on an interactive map, with photos, ratings, and traveler activity feeds.",
+                "stack": "Next.js, Redux Toolkit, PHP, MySQL"
             },
             {
                 "title": "IoT Weather Station",
@@ -144,9 +160,37 @@
                 "link": "https://meteo.miksoft.pro/",
                 "description": "Arduino firmware, a REST API, and a live dashboard; the observatory's safety gate.",
                 "stack": "Arduino, C++, REST API, React"
+            },
+            {
+                "title": "Simple React UI Kit",
+                "icon": "/images/icons/uikit.svg",
+                "link": "https://miksrv.github.io/simple-react-ui-kit/",
+                "description": "Typed React component library published on npm, with Storybook docs; the base for my own web projects.",
+                "stack": "React, TypeScript, Storybook, npm"
+            },
+            {
+                "title": "Portfolio template",
+                "link": "https://github.com/miksrv/developer-portfolio-website",
+                "description": "Open-source Next.js portfolio template used by other developers; the predecessor of this site.",
+                "stack": "Next.js, React, TypeScript"
             }
         ],
         "more": [
+            {
+                "title": "Moon widget",
+                "link": "https://github.com/miksrv/moon-widget",
+                "description": "Typed React component: live Moon phase and ephemeris, PIXI.js-shaded disc"
+            },
+            {
+                "title": "Business AI assistant",
+                "link": "https://github.com/miksrv/telegram-business-ai-bot",
+                "description": "Auto-replies for Telegram Business with grounded answers and LLM provider fallback"
+            },
+            {
+                "title": "CASE",
+                "link": "https://github.com/miksrv/telegram-support-ai-bot",
+                "description": "AI support bot for community group chats, answers only from admin-set context"
+            },
             {
                 "title": "TARS",
                 "link": "https://github.com/miksrv/telegram-ai-bot",
@@ -156,12 +200,6 @@
                 "title": "Starmap service",
                 "link": "https://github.com/miksrv/starmap-service",
                 "description": "On-demand night-sky chart renderer over MQTT"
-            },
-            {
-                "title": "Simple React UI Kit",
-                "icon": "/images/icons/uikit.svg",
-                "link": "https://miksrv.github.io/simple-react-ui-kit/",
-                "description": "Typed React component library on npm, with Storybook docs"
             },
             {
                 "title": "Asteroid tracker",
@@ -192,11 +230,11 @@
         },
         {
             "group": "AI",
-            "items": "LLM integration (OpenAI, Groq), AI-assisted engineering, prompt design, workflow automation"
+            "items": "Claude Code, agentic workflows, MCP servers, multi-agent pipelines, LLM integration (OpenAI, Groq)"
         }
     ],
     "seo": {
         "title": "Misha Topchilo — Engineering Lead",
-        "description": "Engineering Lead with 15+ years building production software across government, media, and enterprise SaaS. I lead teams, design architecture, and ship systems end to end."
+        "description": "Engineering Lead with 20+ years building production software across government, media, and enterprise SaaS. I lead teams, design architecture, and ship systems end to end."
     }
 }

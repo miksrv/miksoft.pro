@@ -41,7 +41,7 @@ describe('Experience Component', () => {
     it('renders badges for contract and part-time roles', () => {
         renderExperience()
 
-        expect(screen.getByText('Contract')).toBeInTheDocument()
+        expect(screen.getByText('Transition contract')).toBeInTheDocument()
         expect(screen.getByText('Part-time')).toBeInTheDocument()
     })
 
